@@ -3,7 +3,6 @@
  * main - print number that are not divisble by 3 and 5
  * Return: 0 (success)
  */
-
 int main(void)
 {
 	int a;
