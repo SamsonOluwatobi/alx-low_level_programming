@@ -25,7 +25,7 @@ int main(void)
 		{
 			diff_half1++;
 		}
-		for (i = 0; password[index]; i++)
+		for (i = 0; password[i]; i++)
 		{
 			if (password[i] >= (33 + diff_half1))
 			{
