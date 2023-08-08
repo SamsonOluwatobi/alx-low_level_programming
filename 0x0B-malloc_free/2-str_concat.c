@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * str_concrat - concatenates two strings
+ * str_concat - concatenates two strings
  * @s1: the first string
  * @s2: the second string
  * Return: pointer to an allocated space
@@ -10,10 +10,10 @@ char *str_concat(char *s1, char *s2)
 	int len_s1 = 0, len_s2 = 0, i;
 	char *o;
 
-	if (s1 == NULL || s2 == NULL)
-	{
+	if (s1 == NULL)
 		s1 = "";
-	}
+	if (s2 == NULL)
+		s2 = "";
 	for (i = 0; s1[i] != '\0'; i++)
 	{
 		len_s1++;

@@ -6,24 +6,25 @@
  */
 int count_words(char *str)
 {
-        int count = 0, i;
-        bool in_word = false;
+	int count = 0, i;
+	bool in_word = false;
 
-        for (i = 0; str[i] != '\0'; i++)
-        {
-                if (str[i] != ' ')
-                {
-                        if (!in_word)
-                        {
-                                count++;
-                                in_word = true;
-                        }
-                }
-                else
-                {
-                        in_word = false;
-        }
-        return (count);
+	for (i = 0; str[i] != '\0'; i++)
+	{
+		if (str[i] != ' ')
+		{
+			if (!in_word)
+			{
+				count++;
+				in_word = true;
+			}
+		}
+		else
+		{
+			in_word = false;
+		}
+	}
+	return (count);
 }
 /**
  * strtow - Splits a string into words.
@@ -36,13 +37,8 @@ char **strtow(char *str)
 	bool in_word = false;
 	char **word_array;
 
-	if (str == NULL || *str == '\0')
-		return (NULL);
-	words = count_words(str);
-	if (words == 0)
-		return (NULL);
-	word_array = malloc((words + 1) * sizeof(char *));
-	if (word_array == NULL)
+	words = count_words(str), word_array = malloc((words + 1) * sizeof(char *));
+	if (word_array == NULL || words == 0 || str == NULL || *str == '\0')
 		return (NULL);
 	while (str[i] != '\0')
 	{
@@ -50,8 +46,7 @@ char **strtow(char *str)
 		{
 			if (!in_word)
 			{
-				in_word = true;
-			       	j = i;
+				in_word = true, j = i;
 			}
 		}
 		else
@@ -68,9 +63,7 @@ char **strtow(char *str)
 				}
 				for (n = 0; j < i; j++, n++)
 					word_array[k][n] = str[j];
-				word_array[k][n] = '\0';
-				k++;
-				in_word = false;
+				word_array[k][n] = '\0', k++, in_word = false;
 			}
 		}
 		i++;
@@ -87,8 +80,7 @@ char **strtow(char *str)
 		}
 		for (n = 0; j < i; j++, n++)
 			word_array[k][n] = str[j];
-		word_array[k][n] = '\0';
-		k++;
+		word_array[k][n] = '\0', k++;
 	}
 	word_array[k] = NULL;
 	return (word_array);
