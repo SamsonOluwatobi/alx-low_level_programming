@@ -7,7 +7,6 @@
 int count_words(char *str)
 {
 	int count = 0, i;
-	bool in_word = false;
 
 	for (i = 0; str[i] != '\0'; i++)
 	{
@@ -16,7 +15,6 @@ int count_words(char *str)
 			if (!in_word)
 			{
 				count++;
-				in_word = true;
 			}
 		}
 		else
