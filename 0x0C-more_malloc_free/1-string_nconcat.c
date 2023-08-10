@@ -31,7 +31,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	}
 
 	count_2 = 0;
-	while (count_2 < n && s2[count_2] != '\0')
+	while (count_2 <= n && s2[count_2] != '\0')
 	{
 		ptr[count_1 + count_2] = s2[count_2];
 		count_2++;
