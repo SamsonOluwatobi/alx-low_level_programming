@@ -1,10 +1,14 @@
 #include "main.h"
-
+/**
+ * _calloc -function that allocates memory for an array, using malloc
+ * @nmemb: elements of an array
+ * @size: size of an array
+ * Return: Array
+ */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	void *arr;
-	unsigned int i;
-	
+
 	if (nmemb == 0 || size == 0)
 	{
 		return (NULL);
@@ -16,15 +20,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 		{
 			return (NULL);
 		}
-		else
-		{
-			i = 0;
-			while (i < nmemb * size)
-			{
-				((char *)arr[i] = 0;
-				i++;
-			}
-		}
-	}
+	memset(arr, 0, nmemb * size);
 	return (arr);
+	}
 }
