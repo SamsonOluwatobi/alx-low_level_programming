@@ -12,9 +12,8 @@ main:
 	call printf
 	pop rbp
 
-	mov rax, 60
-	xor rdi, rdi
-	syscall
+	mov rax, 0
+	ret
 
 section .bss
 	resb 1
