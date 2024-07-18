@@ -24,17 +24,17 @@
  **/
 int exponential_search(int *array, size_t size, int value)
 {
+	size_t lo = 0, hi = size - 1, mid;
+
 	if (!array)
 		return (-1);
-
-	size_t lo = 0, hi = size - 1;
 
 	while (lo <= hi && array[hi] < value)
 		hi *= 2;
 
 	while (lo <= hi)
 	{
-		size_t mid = lo + (hi - lo) / 2;
+		mid = lo + (hi - lo) / 2;
 
 		if (array[mid] == value)
 			return (mid);
