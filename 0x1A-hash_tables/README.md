@@ -60,5 +60,5 @@ The file `100-sorted_hash_table.c` contains advanced functions using sorted hash
 Feel free to contribute to the repository by providing improvements, bug fixes, or additional functionalities. Create a pull request, and it will be reviewed.
 
 Happy coding!
-
+KO
 Lana Samson 🚀
