@@ -40,11 +40,11 @@ int binary_search(int *array, size_t size, int value)
 	/* while there is still a search space */
 	while (right >= left)
 	{
-		/*printing*/
-		print_array(array, left, right);
 		/* calculate the middle index */
 		size_t mid = left + (right - left) / 2;
 
+		/*printing*/
+		print_array(array, left, right);
 		/* if value is found, return the index */
 		if (array[mid] == value)
 			return (mid);
