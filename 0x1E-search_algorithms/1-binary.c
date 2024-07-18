@@ -1,6 +1,24 @@
 #include "search_algos.h"
 
 /**
+* print_array - prints the current part of the array being searched
+* @array: pointer to the first element of the array to print
+* @left: starting index of the subarray
+* @right: ending index of the subarray
+*/
+void print_array(int *array, size_t left, size_t right)
+{
+	printf("Searching in array: ");
+	for (size_t i = left; i <= right; i++)
+	{
+		printf("%d", array[i]);
+		if (i < right)
+			printf(", ");
+	}
+	printf("\n");
+}
+
+/**
 * binary_search - searches for a value in a sorted array of integers,
 * using the Binary search algorithm.
 * @array: pointer to the first element of the array to search in.
@@ -20,6 +38,8 @@ int binary_search(int *array, size_t size, int value)
 	/* while there is still a search space */
 	while (right >= left)
 	{
+		/*printing*/
+		print_array(array, left, right);
 		/* calculate the middle index */
 		size_t mid = left + (right - left) / 2;
 
